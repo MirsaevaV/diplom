@@ -1,9 +1,12 @@
+
+
 font-face {
   font-family: 'ProximaNova';
   src: url('../fonts/ProximaNova-Light.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
 } 
+
 
 font-face {
   font-family: 'ProximaNova';
@@ -157,23 +160,24 @@ footer {
     width: 400px;
     top: 200px;
     padding: 40px;
+    z-index: 1;
+    display: block;
 }
 
 .close {
-    position: absolute;
+        position: absolute;
     top: 10px;
     right: 10px;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
     color: red;
-    font-size: 40px;
-    line-height: 40px;
-    box-shadow: 0 0 5px rgba(0,0,0,.25);
+    font-size: 14px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 25%);
 }
 
 .modal p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
     letter-spacing: 0.05em;
     cursor: pointer;
@@ -256,7 +260,7 @@ footer {
 }
 
 .tel {
-    width: 400px;
+    width: 350px;
     font-size: 12px;
     font-weight: 600;
      padding-left:40px;
@@ -333,7 +337,7 @@ p img {
     top: 5px;
 }
 
-.basket {
+.basket1 {
     display:inline-block;
     margin-top: 10px;
     font-size: 12px;
@@ -341,7 +345,7 @@ p img {
     color: white;
 }
 
-.basket:hover {
+.basket1:hover {
     color: #ff9400;
     cursor: pointer;
 }
@@ -497,7 +501,7 @@ p img {
 /*таймер*/
  .action {
    
-    padding: 30px;
+    
     color: #ff9400;;
 }
 /*.action .container {
@@ -550,7 +554,7 @@ p img {
     }
 
     .gallery1 {
-        max-width: 1158px;
+        max-width: 1120px;
         width: 100%;
         overflow: hidden;
     }
@@ -654,10 +658,11 @@ p img {
         color: white;
         line-height: 24px;
         margin-bottom: 60px;
+        padding-right: 10px;
         
     }
     
-    .name {
+    .name1 {
         border: 1px solid #ff9400;
         border-radius: 10px;
         max-width: 140px;
@@ -760,6 +765,7 @@ p img {
     .faq{
         display:flex;
         flex-direction: column;
+        margin-left: 10px;
     }
     
     .faq h2 {
@@ -785,94 +791,6 @@ p img {
     }
    
     
-@media (max-width: 1600px) {
-    .container {
-        width: auto;
-        margin: 0 40px;
-    }
-}
-
-
-
-@media (max-width: 1400px) {
-    .container {
-        width: auto;
-        margin: 0 40px;
-    }
-}
-
-@media (max-width: 1340px) {
-    .container {
-        width: auto;
-        margin: 0 40px;
-    }
-    
-    .gallery {
-        max-width: 770px;
-        width: 100%;
-        overflow: hidden;
-        margin: 0 auto;
-    }
-    
-    
-}
-
-
-@media (max-width: 992px) {
-    .container {
-        width: auto;
-        margin: 0 20px;
-    }
-}
-
-@media (max-width: 670px) {
-    .container {
-        width: auto;
-        margin: 0 10px;
-    }
-    
-    .d2 {
-        margin-right:5px;
-        font-size:8px;
-    }
-    
-   .logo1 {
-        width: 60px;
-    }
-}
-
-@media (max-width: 600px) {
-    .container {
-        width: auto;
-        margin: 0 10px;
-    }
-    .nav {
-        max-width: 300px;
-        font-size: 8px;
-    }
-    
-    .tel {
-    width: 300px;
-    font-size: 8px;
-}
-
-    .title {
-        font-family: 'Vera Crouz';
-        color: #ff9400;
-        font-size: 70px;  }
-        
-        
-    .shoco p {
-        font-size: 50px;}   
-    
-    .form p {
-    font-size: 14px; }
-    
-    h4 {
-    font: 10px/12px 'ProximaNova';
-}
-
-}
 
 /*html contact*/
     header2 {
@@ -986,7 +904,7 @@ header3 {
     margin: 20px 0;
 }
 #slider-range .ui-widget-header {
-    background: blue;
+    background: #ff9400;
 }
 .catalog article {
     /* display: table; */
@@ -1082,7 +1000,7 @@ header3 {
 
 
 
-/*Product*/
+/* Product*/
 
 .product {
     display: flex;
@@ -1093,13 +1011,21 @@ header3 {
 }
 .bigimage {
     width: 450px;
-    /*height: 550px;*/
-    /*display: flex;
-    align-items: center;
-    justify-content: center;*/
-    border: 1px solid blue;
+    height: 550px;
+    border: 2px solid #ff9400;
+    border-radius: 10px;
     padding: 9px;
+    box-shadow: 0 0 20px rgb(0 0 0 / 70%);
 }
+
+.bigimage:hover {
+    cursor:pointer;
+}
+
+.rail img:hover {
+    cursor:pointer;
+}
+
 .gallery {
     width: 440px;
     height: 50px;
@@ -1108,39 +1034,47 @@ header3 {
     position: relative;
 }
 .gallery button {
-    width: 15px;
     height: 50px;
     position: absolute;
     top: 0;
     overflow: hidden;
-    color: blue;
+    color: black;
 }
+
+ 
+
 .gallery .disabled {
     cursor: default;
     opacity: .3;
 }
 .gallery button:hover {
-    color: black;
+    color: #ffaa36;;
 }
 .gallery .disabled:hover {
-    color: blue;
+    color: black;
 }
 .gallery .gal_left {
     left: 0;
 }
+
+
 .gallery .gal_right {
     right: 0;
+    
 }
+
+
 .gallery button span {
     font: bold 50px/50px 'Roboto';
     display: inline-block;
     margin-top: -9px;
 }
 .gallery > div {
-    width: 440px;
+    width: 400px;
     height: 50px;
     overflow: hidden;
     position: relative;
+    margin-left: 20px;
 }
 .gallery .rail {
     display: flex;
@@ -1151,7 +1085,7 @@ header3 {
     height: 50px;
 }
 .product .price {
-    color: red;
+    color: #ff9400;
     font-size: 50px;
     line-height: 70px;
 }
@@ -1159,8 +1093,25 @@ header3 {
     content: '\20BD'
 }
 
+.btn-danger {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background: #ffaa36;
+    font: 16px/18px 'ProximaNova';
+    margin-bottom: 20px;
+}
+
+.btn-danger:hover {
+        background: #9d661a;
+    }
+
+
+
 
  /*html корзина*/
+
+
  
  /* order */
 .order .icon {
@@ -1171,7 +1122,7 @@ header3 {
     border-bottom: none;
 }
 .table .allsum span {
-    color: red;
+    color: #ffaa36;
 }
 .table .allsum span::after {
     content: '\20\20BD'
@@ -1205,8 +1156,8 @@ header3 {
 .table .qty span {
     border-radius: 50%;
     border: 1px solid black;
-    background: blue;
-    color: white;
+    background: #ffaa36;
+    color: black;
     width: 20px;
     height: 20px;
     display: inline-block;
@@ -1215,6 +1166,12 @@ header3 {
     cursor: pointer;
     user-select: none;
 }
+
+plus:hover {
+   
+    color: black;
+}
+
 .table .qty .minus {
     margin-right: 10px;
 }
@@ -1233,6 +1190,10 @@ header3 {
     display: block;
 }
 
+.name a {
+    color:black;
+}
+
 /* calendar */
 #calendar {
     height: auto;
@@ -1242,4 +1203,209 @@ header3 {
     grid-template-columns: repeat(7, auto);
 }
 
+.getter:hover {
+    cursor: pointer;
+    color: #ff9400;
+}
 
+
+@media (max-width: 1600px) {
+    .container {
+        width: auto;
+        margin: 0 40px;
+    }
+}
+
+
+
+@media (max-width: 1400px) {
+    .container {
+        width: auto;
+        margin: 0 40px;
+    }
+}
+
+@media (max-width: 1340px) {
+    .container {
+        width: auto;
+        margin: 0 40px;
+    }
+    
+    .gallery1 {
+        max-width: 830px;
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    
+    
+}
+
+@media (max-width: 1031px) {
+ 
+    
+    .gallery1 {
+        max-width: 550px;
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    
+    
+}
+
+
+@media (max-width: 992px) {
+    .container {
+        width: auto;
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 703px) {
+ 
+    
+    .gallery1 {
+        max-width: 270px;
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    
+    
+}
+
+
+
+@media (max-width: 670px) {
+    .container {
+        width: auto;
+        margin: 0 10px;
+    }
+    
+    .d2 {
+        margin-right:5px;
+        font-size:8px;
+    }
+    
+   .logo1 {
+        width: 60px;
+    }
+    
+    .nav {
+        max-width: 300px;
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 610px) {
+    .container {
+        width: auto;
+        margin: 0 10px;
+    }
+    
+    
+    .tel {
+    width: 250px;
+    font-size: 8px;
+}
+
+    .title {
+        font-family: 'Vera Crouz';
+        color: #ff9400;
+        font-size: 70px;  }
+        
+        
+    .shoco p {
+        font-size: 30px;
+         padding-top: 110px;
+        
+        }   
+    
+    .form p {
+    font-size: 14px; }
+    
+    h4 {
+    font: 10px/12px 'ProximaNova';
+}
+
+    .titleb  {
+        font-size: 24px;
+    }
+    
+ 
+.bottom a {
+    font-size: 14px;
+    line-height: 30px;
+}
+
+
+.cont {
+    margin-top: 15%;
+    font-size: 80px;
+}
+
+}
+
+
+@media (max-width: 530px) {
+    input.search {
+        display:none;
+    } 
+
+}
+
+@media (max-width: 500px) {
+    .tel {
+    max-width: 170px;
+    }
+    
+    .nav {
+    max-width: 250px;
+    font-size: 6px;   }
+    
+    .basket1 {
+    font-size: 8px;
+    }
+    
+    .user {
+    font-size: 8px;
+}
+    div.d2.del1 {
+        display:none;
+    } 
+    
+.email {
+    width: auto;
+}
+
+
+.form p {
+    
+    margin-right: 20px;
+    margin-bottom: 20px;
+   
+}
+
+    .adress, .mail {
+        font-size: 8px;
+}
+
+    .mini1 {
+        width:20px;
+    }
+    
+    .user img {
+        
+        height:18px;
+    }
+    
+    .basket1 img {
+        
+        height:18px;
+    }
+    
+    .title {
+        font-size: 50px;  }
+
+}

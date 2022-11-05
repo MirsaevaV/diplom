@@ -198,28 +198,28 @@ let rangemax = 3000;
  let startbasket = [
     {
         id: 1,
-        name: 'ZHABA',
-        price: 2000,
-        quantity: 100,
+        name: 'Молочный шоклад',
+        price: 1000,
+        quantity: 3,
         link: ''
     },
     {
         id: 2,
-        name: 'GADIUKA',
-        price: 3000,
-        quantity: 10,
+        name: 'Шоколад клубничный',
+        price: 1200,
+        quantity: 3,
         link: ''
     },
     {
-        id: 111,
-        name: 'Cangaroo',
-        price: 15500,
+        id: 3,
+        name: 'Шоколад черный',
+        price: 850,
         quantity: 1,
         link: ''
     }
 ];
 
- function orderReCount() {
+function orderReCount() {
     let point = $('.table');
     let allsum = 0;
     point.find('tbody tr').each(function(){
@@ -239,8 +239,7 @@ function changeOrder(line, num){
     }
 }
 
-
- $('.btn-buy').click(function(){
+$('.btn-buy').click(function(){
         let res = {}
         let aim = $(this).parents('.product');
         res.id = aim.data('product-id');
@@ -266,16 +265,32 @@ function changeOrder(line, num){
             basket = [res];
         }
         localStorage.setItem('basket', JSON.stringify(basket));
+        /*
+        вариант без флага
         
-         if ('.order') {
+        if (!basket) basket = [];
+        for (let item of basket) {
+            if (item.id == res.id) {
+                item.quantity = +item.quantity + +res.quantity;
+                localStorage.setItem('basket', JSON.stringify(basket));
+                return;
+            }
+        }
+        basket.push(res);
+        localStorage.setItem('basket', JSON.stringify(basket));
+        */
+    });
+    
+    if ('.order') {
         let point = $('.table tbody');
         let count = 1;
         let basket = JSON.parse(localStorage.getItem('basket'));
         if (!basket) basket = [];
         basket.push(...startbasket);
         for (let item of basket) {
-            let hlpstr = '<tr data-id="'+item.id+'"><th scope="row" class="index">'+count+'</th><td class="name"><a href="'+item.link+'">'+item.name+'</a></td><td class="qty"><span class="minus">&minus;</span><strong>'+item.quantity+'</strong><span class="plus">&plus;</span></td><td class="price">'+item.price+'</td><td class="sum"></td><td class="delete icon">&#xe906;</td></tr>';
-            point.append(hlpstr);
+            let hlpstr = '<tr data-id="'+item.id+'"><th scope="row" class="index">'+count+'</th><td class="name"><a href="'+item.link+'">'+item.name+'</a></td><td class="qty"><span class="minus">&minus;</span><strong>'+item.quantity+'</strong><span class="plus">&plus;</span></td><td class="price">'+item.price+'</td><td class="sum"></td><td class="delete icon">&#10008;</td></tr>';
+            point.append(hlpstr);	
+
             count++;
         }
         orderReCount();
@@ -350,7 +365,6 @@ function changeOrder(line, num){
     }
     
     console.log('just loaded');
-});
 
-
+    
 

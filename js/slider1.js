@@ -9,7 +9,7 @@
     }
 
     /* конфигурация */
-    let width = 383; // ширина картинки
+    let width = 280; // ширина картинки
     let count = 1; // видимое количество изображений
 
     let list = carousel.querySelector('ul');
