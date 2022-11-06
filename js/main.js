@@ -362,9 +362,11 @@ $('.btn-buy').click(function(){
             let date = new Date()
             makeDatePicker(`${date.getFullYear()}-${addZero(+date.getMonth() + 1)}-${addZero(+date.getDate())}`)
         });
-    }
+    };
+    
+  
     
     console.log('just loaded');
 
     
-
+ 
