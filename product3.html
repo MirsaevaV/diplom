@@ -5,15 +5,18 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <title>Главная страница</title>
+        <title>Product</title>
         
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/jquery-ui.css">
+  
         
         <script defer src="js/jquery-3.6.1.min.js"></script>
-        
-        <script defer src="js/slider.js"></script>
-        
+        <script defer src="js/jquery-ui.min.js"></script>
+        <script defer src="js/gallery.js"></script>
+        <script defer src="js/lightbox.js"></script>
         <script defer src="js/main.js"></script>
+
     </head>
     
     <body>
@@ -38,10 +41,10 @@
             </section>
         
         
-        <header>
+        <header3>
             
             <section class="container center">
-                <div><a href="#"><img class = "logo1" src="image/logo (1).png" width="113" alt="Шоколадный дом"</a></div>
+                <div><a href="index.html"><img class = "logo1" src="image/logo (1).png" width="113" alt="Шоколадный дом"</a></div>
                 <div class="navcont">
                     <div class="nav">
                         <a href ="#">О НАС</a>
@@ -57,7 +60,7 @@
                  <div class="navcont1">
                     <input class="search" type="search" name="search" placeholder="Поиск по сайту">
                     <p class="user"><img src="image/user.png">Войти</p>
-                    <a href="order.html"><p class="basket1"><img src="image/basket.png">Корзина</p></a>
+                   <a href="order.html"><p class="basket1"><img src="image/basket.png">Корзина</p></a>
                 </div>
                 
             
@@ -72,126 +75,117 @@
 			                <li><a href="catalog.html">23 февраля</a></li>
 			            </ul>
                     </li>
-			        <li><a href="catalog.html">Каталог</a></li>
+			        <li><a href="catalog.html">Каталог</a>
+                    
+                    </li>
 			        <li><a href="#">Спецпредложения</a></li> 
 			    </ul>
             
             </section>
             <div class="container containercontent">
-                <div class= "title">Дом шоколада</div>
-                <div class="titleb">Настоящий, полезный шоколад и роскошные шоколадные подарки собственного производства с доставкой к вам домой от 1 дня.</div>
-                <a href="#main" class="arrow-image-down"><img src="image/down.svg" width="30px"></a>
+                <div class= "title cont">Товары</div>   
            </div>
-            <div class="container">
-            
-            </div>
-       </header>
-        
-        <main id="main">
-           <section>
-           <section class="action">
-                <div class="container">
-                    <p>Скидка 10% на первый заказ!</p>
-                    <p>
-                        До окончания акции осталось:
-                        <span class="actiontimer" data-actionend="2022-11-10T12:00:00">&nbsp;</span>
-                    </p>
-                </div>
-            </section>
-            
-           <!--<div class="contmin">
-                <div class ="carousel">
-                    <a class="arrow prev">&#10094;</a>
-                    <div class="gallery">
-                        <ul>
-                        <li><img src ="image/karus/1.png"></li>
-                    
-                        <li><img src ="image/karus/2.png"></li>
-                      
-                   
-                        <li><img src ="image/karus/3.png"></li>
-                   
-                        <li><img src ="image/karus/5.png"></li>
-                    
-                        <li><img src ="image/karus/5.png"></li>
-                        </ul>
-                    </div>
-                    
-                    <a class="arrow next">&#10095;</a>
-                </div>
-                </div> -->
-           <!--</section>
-
            
-            <section>
-            <div class="container">
-            <div id="carousel" class="carousel">
-            <button class="arrow prev">&#10094;</button>
-            <div class="gallery1">
-              <ul>
-                <li><img class ="image" width="260" src ="image/karus/1.png">Молочный шоколад на миндальном молоке в плитке</li>
-                <li><img class ="image" width="260" src ="image/karus/2.png"></li>
-                <li><img class ="image" width="260" src ="image/karus/3.png"></li>
-                <li><img class ="image" width="260" src ="image/karus/4.png"></li>
-                <li><img class ="image" width="260" src ="image/karus/5.png"></li>
-                <li><img class ="image" width="260" src ="image/karus/6.png"></li>
-                <li><img class ="image" width="260" src ="image/karus/7.png"></li>
-                <li><img class ="image" width="260" src ="image/karus/1.png"></li>  
-              </ul>
-            </div>
-            <button class="arrow next">&#10095;</button>
-           </div>
-           </div>
-            </section>-->
-           <section class="slider" id="slider1">
-                <div class="slider_desk">
-                    <div class="slider_block">
-                        <img src="image/catalog/1.png"  alt="pic 1">
-                    </div>
+       </header3>
+        
+            <main>
+             <section class="container">
+                <ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="index.html">
+                            <span itemprop="name">Главная страница</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                        <link itemprop="url" href="index.html">
+                    </li>
                     
-                    <div class="slider_block">
-                        <img src="image/catalog/2.png"  alt="pic 2">
-                    </div>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="catalog.html">
+                            <span itemprop="name">Каталог</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                        <link itemprop="url" href="catalog.html">
+                    </li>
                     
-                    <div class="slider_block">
-                        <img src="image/catalog/3.png"  alt="pic 3">
-                    </div>
-                    <div class="slider_block">
-                        <img src="image/catalog/4.png"  alt="pic 4">
-                    </div>
-                    
-                    <div class="slider_block">
-                        <img src="image/catalog/5.png"  alt="pic 5">
-                    </div>
-                    
-                    <div class="slider_block">
-                        <img src="image/catalog/6.png"  alt="pic 6">
-                    </div>
-                    <div class="slider_block">
-                        <img src="image/catalog/7.png"  alt="pic 7">
-                    </div>
-                    
-                    <div class="slider_block">
-                        <img src="image/catalog/8.png"  alt="pic 8">
-                    </div>
-                </div>
-                
-                <button type="button" class="to_left icon"></button>
-                
-                <button type="button" class="to_right icon"></button>
-                
-                <div class="slider_points"></div>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">Апельсиновый шоколад </span>
+                        <meta itemprop="position" content="3">
+                        <link itemprop="url" href="product.html">
+                    </li>
+                </ul>
             </section>
             
-            <section>
-            <div class="shoco">
-                <div class="contmin">
-                    <p>Многие воспринимают шоколад, как источник получения удовольствия
-                    или просто съесть что-нибудь вкусное и  побаловать себя! Но  это не  
-                    совсем так... </p>
+            <section class="container">
+                <div class="product" data-product-id="333333" itemscope itemtype="https://schema.org/Product">
+                    <div class="images">
+                        <div class="bigimage">
+                            <img src="image/product/31.jpg" width="450" height="550"  alt="Фисташковый шоколад" itemprop="image">
+                        </div>
+                        
+                        <div class="gallery">
+                            <div>
+                                <div class="rail">
+                                    <img src="image/product/mini_31.jpg" alt="Фисташковый шоколад" itemprop="image">
+                                    <img src="image/product/mini_32.jpg" alt="Молочный шоколад" itemprop="image">
+                                    <img src="image/product/mini_31.jpg" alt="Молочный с орехом" itemprop="image">
+                                    <img src="image/product/mini_32.jpg" alt="Апельсиновый шоколад" itemprop="image">
+                                    <img src="image/product/mini_31.jpg" alt="Апельсиновый с орехом" itemprop="image">
+                                    <img src="image/product/mini_32.jpg" alt="Белый шоколад">
+                                    <img src="image/product/mini_31.jpg" alt="Клубничный шоколад">
+                                    <img src="image/product/mini_32.jpg" alt="Фисташковый шоколад 200гр">
+                                    <img src="image/product/mini_31.jpg" alt="Молочный шоколад 200гр">
+                                    <img src="image/product/mini_32.jpg" alt="Молочный с орехом 200гр">
+                                    <img src="image/product/mini_31.jpg" alt="Апельсиновый шоколад 200гр">
+                                    <img src="image/product/mini_32.jpg" alt="Апельсиновый с орехом 200гр">
+                                    <img src="image/product/mini_31.jpg" alt="Белый шоколад 200гр">
+                                    <img src="image/product/mini_32.jpg" alt="Клубничный шоколад 200гр">
+                                    <img src="image/product/mini_31.jpg" alt="Апельсиновый шоколад 200гр">
+                                    
+                                    
+                                </div>
+                            </div>
+                            <button type="button" class="gal_left disabled"><span>&#8249;</span></button>
+                            <button type="button" class="gal_right"><span>&#8250;</span></button>
+                        </div>
+                    </div>
+                    
+                    <div class="offer">
+                        <h1 itemprop="name">Апельсиновый  шоколад</h1>
+                        <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <span itemprop="price">950</span>
+                            <meta itemprop="priceCurrency" content="RUB">
+                        </p>
+                        <button type="button" class="btn btn-danger btn-buy">В корзину</button>
+                        <p itemprop="description"></p>
+                        <p>Полностью шпинатный шоколад в формате слитка. Это неповторимое 
+                        сочетание вкуса и пользы. Те, кто пробовал этот шоколад в плитках, 
+                        знают, насколько он вкусный, а в формате зеленого слитка он точно 
+                        заберет Ваше сердце навсегда. Яркий, нежный, обволакивающий рецепторы 
+                        на языке, шоколад со шпинатом порадует Вас и всю Вашу семью. На один 
+                        слиток требуется не менее 2 кг. свежих листьев шпината. Но самое 
+                        главное, что в этом шоколаде всего 378 калорий!</p>
+                       
+                    </div>
                 </div>
-            </div>
+            </section>
+           
+        
+        
+        
+        
+           
 
+
+
+
+
+
+
+
+
+
+
+           <section>
             <div class="forma">
                  <div class="contmin">
                    <div class="formasvyzi"> 

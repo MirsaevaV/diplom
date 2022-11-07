@@ -196,27 +196,7 @@ let rangemax = 3000;
 
  /*корзина*/
  let startbasket = [
-    {
-        id: 1,
-        name: 'Молочный шоклад',
-        price: 1000,
-        quantity: 3,
-        link: ''
-    },
-    {
-        id: 2,
-        name: 'Шоколад клубничный',
-        price: 1200,
-        quantity: 3,
-        link: ''
-    },
-    {
-        id: 3,
-        name: 'Шоколад черный',
-        price: 850,
-        quantity: 1,
-        link: ''
-    }
+   
 ];
 
 function orderReCount() {
