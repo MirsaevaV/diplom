@@ -25,7 +25,7 @@ function makeSlider(slider_id, time) {
     blocks.eq(1).addClass('next');
     blocks.eq(blocks.length - 1).addClass('prev');
     setTimeout(function hlpsld(){ // запускаем таймер для запуска слайдера 
-        sliderGo(slider_id, 'to_left');
+        sliderGo(slider_id, 'to_right');
         setTimeout(hlpsld, time); // внутри таймера создаем и запускаем следующий таймер для рекурсивного запуска
     }, time);
 }
@@ -37,11 +37,11 @@ function sliderGo(slider_id, align) {
     /*
     определяем новый current и направление движения слайдов
     */
-    if (align == 'to_left') { // next станет current, current станет prev
+    if (align == 'to_right') { // next станет current, current станет prev
         sliderCursor[slider_id]++;
         if (sliderCursor[slider_id] >= blocks.length) sliderCursor[slider_id] -= blocks.length;
         align = 'prev';
-    } else if (align == 'to_right') { // prev станет current, current станет next
+    } else if (align == 'to_left') { // prev станет current, current станет next
         sliderCursor[slider_id]--;
         if (sliderCursor[slider_id] < 0) sliderCursor[slider_id] += blocks.length;
         align = 'next';
@@ -93,5 +93,3 @@ function sliderGo(slider_id, align) {
 }
 
 
-$("#contents").css("opacity","0.5");
-$("#contents").animate({opacity:'0.8'},7000);

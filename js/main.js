@@ -8,23 +8,39 @@ function dropModalWindow() {
 }
 
 
-
+let citylist = ['Москва', 'Тверь','Новосибирск', 'Калининград', 'Новый Уренгой'];
 
 $(function(){
+     $('#city span').html(localStorage.getItem('city') || 'Москва');
+    
     $('#city').click(function(){
         getModalWindow('citymodal');
-        $('.modal').append('<h3>Выберите город доставки:</h3><p>Москва</p><p>Санкт-Петербург</p><p>Казань</p><p>Сочи</p><p>Воронеж</p>');
+        $('.modal').append('<h1>Выберите город:</h1><input type="text" id="citysearch" placeholder="Введите название"><div class="columns"></div>');
+        for (let city of citylist) {
+            $('.modal .columns').append('<p>' + city + '</p>');
+        }
         $('.modal p').click(function(){
-            $('#city').html($(this).html());
+            let city = $(this).html()
+            $('#city span').html(city);
+            localStorage.setItem('city', city);
             dropModalWindow();
         });
-    });
+        $('#citysearch').on('input', function(){
+            let namepart = $('#citysearch').val().toLowerCase();
+            $('.modal p').each(function(){
+                if (!this.innerHTML.toLowerCase().includes(namepart)) {
+                    this.style.display = 'none';
+                } else {
+                    this.style.display = 'block';
+                }
+            });
+        });
     
    
     console.log('just loaded');
 });
 
-
+});
 
     
     

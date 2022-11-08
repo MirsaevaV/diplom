@@ -29,8 +29,8 @@ font-face {
     font-display: swap;
 }
 
-* {
-  border: 1px solid #f00; } 
+/** {
+  border: 1px solid #f00; } */
 
 /* global reset */
 
@@ -113,6 +113,7 @@ footer {
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 20px rgb(0 0 0 / 70%);
 }
 
 /*header*/
@@ -130,15 +131,15 @@ footer {
     
 }
 
-#city {
+#city span{
     cursor: pointer;
     padding-left: 10px;
    
 }
 
-#city:hover {
+#city span:hover {
 			    color: #ff9400;
-                font-size: 14px;
+                font-size: 13px;
                 
 		}
 
@@ -150,6 +151,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
+     z-index: 10;
     cursor: pointer; }
 
 .modal {
@@ -160,7 +162,7 @@ footer {
     width: 400px;
     top: 200px;
     padding: 40px;
-    z-index: 1;
+    z-index: 10;
     display: block;
 }
 
@@ -177,7 +179,7 @@ footer {
 }
 
 .modal p {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 22px;
     letter-spacing: 0.05em;
     cursor: pointer;
@@ -193,7 +195,11 @@ footer {
     color:#ff9400;
 } 
 
-
+#citysearch {
+    border-radius: 5px;
+    margin: 5px auto;
+    width: 170px;
+}
 
 
 #lightbox img {
@@ -219,7 +225,7 @@ footer {
     
 }
 
-.d1 {
+#city {
     display: flex;
     align-items: center;
     margin-right: 16px
@@ -649,13 +655,13 @@ p img {
     z-index: 1;
 }
 .slider_block.was_current {
-    transition: left 4s;
+    transition: left 0.9s;
     
 }
 .slider_block.current {
     left: 0;
     z-index: 1;
-    transition: left 4s;
+    transition: left 0.9s;
     
     
 }
@@ -714,7 +720,7 @@ p img {
     opacity: 1;
 }    
         
-
+   /*форма*/
     .shoco {
         background: url(../image/poster2.jpg) center no-repeat fixed;
         background-size: cover;
@@ -832,11 +838,11 @@ p img {
     .seti2 img {
         border-radius: 50%;
         margin-right:5px;
-        border: 1px solid;
+        border: 2px solid;
     }
     
     .seti2 a img:hover {
-        border: 1px solid orange;
+        border: 2px solid orange;
     }
     
 /*footer*/
@@ -882,11 +888,11 @@ p img {
     }
     .seti img {
         border-radius: 50%;
-        border: 1px solid;
+        border: 2px solid;
     }
     
     .seti a img:hover {
-        border: 1px solid orange;
+        border: 2px solid orange;
     }
     
     h2 {
@@ -1316,7 +1322,12 @@ plus:hover {
 #order {
     height: 30px;
     text-align: center;
+    
 }
+
+
+
+
 .container.empty,
 .empty .container {
     display: none;
@@ -1471,13 +1482,24 @@ plus:hover {
 
 @media (max-width: 620px) {
    .modal {
-    left: calc(50% - 100px);
-    width: 200px;
+    left: calc(50% - 130px);
+    width: 150px;
+     box-sizing: content-box;
 }
+
+h1 {
+    font-size: 18px;
+}
+
+
 
 .slider {
     height: 190px;
     }
+
+
+
+
 
 }   
 
